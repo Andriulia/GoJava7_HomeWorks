@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class FiveDigitsSort1_1_2 {
     public static void main(String[] args) {
 
-        System.out.println("Please enter 5 numbers with a space...");
+        System.out.println("Please enter 5 numbers with a space or pressing ''Enter''...");
 
         for (;;) {
             Exc();
@@ -26,9 +26,9 @@ public class FiveDigitsSort1_1_2 {
 
             int a5[] = new int[5];
 
-            for(int i=0;i < a5.length; i++) {   // 1
-                a5[i] = scanner.nextInt();      // 1
-            }                                   // 1
+            for(int i=0;i < a5.length; i++) {
+                a5[i] = scanner.nextInt();
+            }
 
             System.out.println("Initial array:");
             for (Object number : a5) {
