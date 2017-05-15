@@ -11,14 +11,13 @@ public class FiveDigitsSort1_1_2 {
 
         System.out.println("Please enter 5 numbers with a space or pressing ''Enter''...");
 
-        for (;;) {
+        while (true) {
             Exc();
-            continue;
         }
 
     }
 
-    public static void Exc() {
+    public static void Exc() throws NumberFormatException {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -27,18 +26,17 @@ public class FiveDigitsSort1_1_2 {
             int a5[] = new int[5];
 
             for(int i=0;i < a5.length; i++) {
-                a5[i] = scanner.nextInt();
+                String s = scanner.nextLine();
+                a5[i] = Integer.parseInt(s);
             }
 
             System.out.println("Initial array:");
-            for (Object number : a5) {
-                System.out.print(number + ", ");
+            for (int i=0; i<4; i++) {
+                System.out.print(a5[i] + ", ");
+            }
+            while (true){
+                System.out.println(a5[4] + ".");
                 break;
-            }
-
-            System.out.println("Initial array:");
-            for (Object number : a5) {
-                System.out.print(number + ", ");
             }
 
             for (int i = 0; i < a5.length; i++) {
@@ -61,11 +59,13 @@ public class FiveDigitsSort1_1_2 {
             System.out.println();
             System.out.println();
             System.out.println("Sorted array");
-            for (Object number : a5) {
-                System.out.print(number + ", ");
+            for (int i = 0; i < 4; i++) {
+                System.out.print(a5[i] + ", ");
             }
+            System.out.println(a5[4] + ".");
 
-        } catch (InputMismatchException e) {
+
+        } catch (Exception e) {
 
             System.out.println("Another input...");
 
@@ -74,3 +74,4 @@ public class FiveDigitsSort1_1_2 {
     }
 
 }
+
