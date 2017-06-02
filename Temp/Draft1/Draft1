@@ -1,0 +1,11 @@
+public class Draft1 {
+
+    public static void main(String[] args) {
+
+        System.out.println("Array size?..");
+        ArraySize arraySize = new ArraySize();
+        System.out.println(arraySize.arraySize());
+
+    }
+
+}
